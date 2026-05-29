@@ -1,16 +1,10 @@
 %-------------------------------------------------------------------------------
-%   SHREESHAIL SHIVPPA PADADALI — RESUME
-%   LaTeX (XeLaTeX or pdfLaTeX), single-page, ATS-friendly.
-%   Based on Jake Gutierrez's open-source resume template (MIT).
-%
-%   To compile on Overleaf:
-%     1. Create a New Project -> Blank Project.
-%     2. Replace main.tex with the contents of this file.
-%     3. Click "Recompile" (default pdfLaTeX engine works).
-%     4. Click the download (arrow) icon to save the PDF.
+%   SHREESHAIL SHIVPPA PADADALI -- RESUME
+%   Single-page A4, ATS-friendly LaTeX resume.
+%   Engine: pdfLaTeX. Compiles cleanly on Overleaf with no setup.
 %-------------------------------------------------------------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -30,42 +24,35 @@
 \input{glyphtounicode}
 
 %-------------------------------------------------------------------------------
-%   PAGE GEOMETRY & STYLING
+%   GEOMETRY -- A4, single-page friendly margins
 %-------------------------------------------------------------------------------
 \pagestyle{fancy}
-\fancyhf{}
-\fancyfoot{}
+\fancyhf{}\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Section formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
-% Make the PDF machine-readable (ATS-friendly).
+% ATS-friendly machine-readable PDF
 \pdfgentounicode=1
 
 %-------------------------------------------------------------------------------
 %   CUSTOM COMMANDS
 %-------------------------------------------------------------------------------
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
@@ -76,9 +63,9 @@
 }
 
 \newcommand{\resumeProjectHeading}[2]{
-    \item
+  \item
     \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
+      \small#1 & \small#2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
@@ -86,137 +73,110 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, topsep=2pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %===============================================================================
 \begin{document}
 %===============================================================================
 
-%-------------------------------------------------------------------------------
-%   HEADER
-%-------------------------------------------------------------------------------
+%---------- HEADER ----------
 \begin{center}
-    {\Huge \scshape Shreeshail Shivppa Padadali} \\ \vspace{2pt}
+    {\LARGE \scshape \textbf{Shreeshail Shivppa Padadali}} \\ \vspace{2pt}
     \small Amaravati Gents PG, Brookfield, Bengaluru 560037 \\ \vspace{2pt}
     \small
-    \faPhone\ +91-8277220852 \quad
-    \faEnvelope\ \href{mailto:shreeshailx@gmail.com}{shreeshailx@gmail.com} \\ \vspace{4pt}
-    \faGlobe\ \href{https://shreeshail-sp.github.io/Portfolio/}{Portfolio} \quad
-    \faLinkedin\ \href{https://www.linkedin.com/in/shreeshail-padadali/}{LinkedIn} \quad
-    \faGithub\ \href{https://github.com/Shreeshail-sp}{GitHub} \quad
+    \faPhone\ +91-8277220852 \;\textbar\;
+    \faEnvelope\ \href{mailto:shreeshailx@gmail.com}{shreeshailx@gmail.com} \;\textbar\;
+    \faGlobe\ \href{https://shreeshail-sp.github.io/Portfolio/}{Portfolio} \;\textbar\;
+    \faLinkedin\ \href{https://www.linkedin.com/in/shreeshail-padadali/}{LinkedIn} \;\textbar\;
+    \faGithub\ \href{https://github.com/Shreeshail-sp}{GitHub} \;\textbar\;
     \faTrophy\ \href{https://www.kaggle.com/}{Kaggle}
 \end{center}
 
-%-------------------------------------------------------------------------------
-%   CAREER OBJECTIVE
-%-------------------------------------------------------------------------------
+%---------- CAREER OBJECTIVE ----------
 \section{Career Objective}
-\small Motivated Computer Science undergraduate eager to take on real-world challenges and contribute meaningfully to impactful projects. Quick learner with a strong interest in building practical solutions and working in team-driven environments. Seeking an internship opportunity to grow, take ownership, and deliver high-quality results.
+\small Motivated Computer Science undergraduate eager to take on real-world challenges and contribute to impactful projects. Quick learner with a strong interest in building practical solutions in team-driven environments. Seeking an internship opportunity to grow, take ownership, and deliver high-quality results.
+\vspace{-2pt}
 
-%-------------------------------------------------------------------------------
-%   EDUCATION
-%-------------------------------------------------------------------------------
+%---------- EDUCATION ----------
 \section{Education}
 \resumeSubHeadingListStart
-
   \resumeSubheading
     {CMR Institute of Technology}{2022 -- 2026 \textit{(Expected)}}
     {B.E. \textit{(Computer Science and Engineering)}}{Bengaluru, Karnataka}
-
   \resumeSubheading
     {Ambika PU College}{2020 -- 2022}
     {Pre-University \textit{(Science)}}{Puttur, Karnataka}
-
   \resumeSubheading
     {Shri Sharada English Medium High School}{2019 -- 2020}
     {SSLC}{Muddebihal, Karnataka}
-
 \resumeSubHeadingListEnd
 
-%-------------------------------------------------------------------------------
-%   TECHNICAL SKILLS
-%-------------------------------------------------------------------------------
+%---------- TECHNICAL SKILLS -- 2-column layout ----------
 \section{Technical Skills}
-\begin{itemize}[leftmargin=0.0in, label={}]\small{\item{
-    \textbf{Programming:} Python (NumPy, Pandas, OOP), C \\ \vspace{2pt}
-    \textbf{Data Science \& Analysis:} Data Cleaning, Visualization (Matplotlib, Seaborn), EDA \\ \vspace{2pt}
-    \textbf{Machine Learning:} Scikit-learn, Supervised \& Unsupervised Learning, Model Evaluation \\ \vspace{2pt}
-    \textbf{NLP:} NLTK (Basics), Text Preprocessing, Tokenization, VADER \\ \vspace{2pt}
-    \textbf{AI \& GenAI:} LLMs, RAG Pipelines, OpenAI APIs, LangChain, FAISS \\ \vspace{2pt}
-    \textbf{DevOps \& Cloud:} Docker, Kubernetes, AWS ECS, Amazon ECR, IAM, CloudWatch, Terraform \\ \vspace{2pt}
-    \textbf{Monitoring \& Observability:} Prometheus, Grafana, ELK Stack \\ \vspace{2pt}
-    \textbf{CI/CD \& Tools:} Git, GitHub, GitHub Actions, Jenkins (Basic), Postman \\ \vspace{2pt}
-    \textbf{Databases:} MySQL, SQL (Joins, Queries, Data Retrieval) \\ \vspace{2pt}
-    \textbf{Soft Skills:} Communication, Client Interaction, Presentation, Teamwork, Leadership
-}}\end{itemize}
+\vspace{-2pt}
+\noindent\begin{minipage}[t]{0.48\textwidth}
+\small
+\textbf{Programming:} Python (NumPy, Pandas, OOP), C \\[2pt]
+\textbf{Data Science \& Analysis:} Data Cleaning, Visualization (Matplotlib, Seaborn), EDA \\[2pt]
+\textbf{Machine Learning:} Scikit-learn, Supervised \& Unsupervised, Model Evaluation \\[2pt]
+\textbf{NLP:} NLTK, Text Preprocessing, Tokenization, VADER \\[2pt]
+\textbf{AI \& GenAI:} LLMs, RAG Pipelines, OpenAI APIs, LangChain, FAISS
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\small
+\textbf{DevOps \& Cloud:} Docker, AWS ECS, Amazon ECR, IAM, CloudWatch \\[2pt]
+\textbf{CI/CD \& Tools:} Git, GitHub, GitHub Actions, Jenkins (Basic), Postman \\[2pt]
+\textbf{Databases:} MySQL, SQL (Joins, Queries, Data Retrieval) \\[2pt]
+\textbf{Soft Skills:} Communication, Client Interaction, Presentation, Teamwork, Leadership
+\end{minipage}
+\vspace{2pt}
 
-%-------------------------------------------------------------------------------
-%   EXPERIENCE
-%-------------------------------------------------------------------------------
+%---------- EXPERIENCE ----------
 \section{Experience}
 \resumeSubHeadingListStart
-
   \resumeSubheading
     {DevOps Intern -- Avijo}{Apr 2026 -- Present}
     {Internship}{Remote}
     \resumeItemListStart
-        \resumeItem{Containerized backend applications using \textbf{Docker} and deployed services on \textbf{AWS ECS}.}
-        \resumeItem{Built automated \textbf{CI/CD pipelines} with GitHub Actions and integrated \textbf{Amazon ECR} for deployments.}
-        \resumeItem{Monitored deployments, tested APIs using Postman, and managed cloud services like \textbf{ECS, IAM, and CloudWatch}.}
+      \resumeItem{Containerized backend applications using \textbf{Docker} and deployed services on \textbf{AWS ECS}.}
+      \resumeItem{Built automated \textbf{CI/CD pipelines} with GitHub Actions and integrated \textbf{Amazon ECR} for deployments.}
+      \resumeItem{Monitored deployments, tested APIs using Postman, and managed cloud services like \textbf{ECS, IAM, CloudWatch}.}
     \resumeItemListEnd
-
 \resumeSubHeadingListEnd
 
-%-------------------------------------------------------------------------------
-%   PROJECTS
-%-------------------------------------------------------------------------------
+%---------- PROJECTS (only two) ----------
 \section{Projects}
 \resumeSubHeadingListStart
 
-  % --- Project 1: AI-powered Scalable MLOps Platform ---
   \resumeProjectHeading
-    {\textbf{AI-powered Scalable MLOps Platform} \emph{$|$ Python, FastAPI, Docker, Kubernetes, Terraform, GitHub Actions} \\
-     \footnotesize \faGithub\ \href{https://github.com/Shreeshail-sp/AI-powered-Scalable-MLOps-Platform}{GitHub Repository}}{2025}
+    {\textbf{Airbnb Sentiment Analysis} \emph{$|$ Python, NLTK (VADER), Pandas, Plotly, GitHub Pages} \;\textbar\;
+     \faGlobe\ \href{https://shreeshail-sp.github.io/Air_BNB_Sentiment-_Ananlysis/}{Live Demo} \;\textbar\;
+     \faGithub\ \href{https://github.com/Shreeshail-sp/Air_BNB_Sentiment-_Ananlysis}{Repository}}{2024}
     \resumeItemListStart
-      \resumeItem{Designed and built an end-to-end \textbf{MLOps automation platform} that takes a Git push from commit to live, scaled, monitored ML API on Kubernetes -- with zero manual steps.}
-      \resumeItem{Provisioned cloud infrastructure (VPC, ECR, EKS) using \textbf{Terraform} and authored a multi-stage \textbf{Dockerfile} producing a $\sim$250 MB non-root image with health probes baked in.}
-      \resumeItem{Authored Kubernetes manifests with HPA (auto-scale 2-10 pods on CPU/memory), rolling updates, readiness/liveness probes, and Kustomize overlays for dev/staging/prod environments.}
-      \resumeItem{Built CI/CD with \textbf{GitHub Actions}: ruff lint + pytest matrix (91\% coverage), Docker build with cache, image publish to GHCR, automated rollout with rollback on smoke-test failure.}
-    \resumeItemListEnd
-
-  % --- Project 2: Airbnb Sentiment Analysis (NOW WITH LIVE DEMO) ---
-  \resumeProjectHeading
-    {\textbf{Airbnb Sentiment Analysis} \emph{$|$ Python, NLTK (VADER), Pandas, Plotly, GitHub Pages} \\
-     \footnotesize \faGlobe\ \href{https://shreeshail-sp.github.io/Air_BNB_Sentiment-_Ananlysis/}{Live Demo} \quad
-     \faGithub\ \href{https://github.com/Shreeshail-sp/Air_BNB_Sentiment-_Ananlysis}{GitHub Repository}}{2024}
-    \resumeItemListStart
-      \resumeItem{Built an end-to-end NLP pipeline that ranks \textbf{119 Airbnb listings} across \textbf{14{,}579 reviews} by sentiment using VADER and POS-tagged noun-phrase mining, surfacing features guests praise or complain about.}
+      \resumeItem{Implemented an end-to-end sentiment analysis pipeline that ranks \textbf{119 Airbnb listings} across \textbf{14{,}579 reviews} by review polarity (range $-1$ to $1$) using NLTK VADER and POS-tagged noun-phrase mining.}
+      \resumeItem{Applied review and phrase-level sentiment to surface the specific features guests praise or complain about, producing structured insights and summary metrics for stakeholders.}
       \resumeItem{Shipped a public, fully static dashboard on \textbf{GitHub Pages} with sortable rankings, distribution charts, and four interactive Plotly reports -- requires no backend server.}
-      \resumeItem{Reduced report HTML payloads from 4.5 MB to 9 KB each (\textbf{500$\times$ smaller}) by switching from inlined plotly.js to CDN, making the dashboard load instantly.}
     \resumeItemListEnd
 
-  % --- Project 3: FinBot ---
   \resumeProjectHeading
-    {\textbf{FinBot: News Research Tool} \emph{$|$ Python, LangChain, FAISS, OpenAI, Streamlit} \\
-     \footnotesize \faGithub\ \href{https://github.com/Shreeshail-sp}{GitHub Profile}}{2024 -- 2025}
+    {\textbf{FinBot: News Research Tool} \emph{$|$ Python, LangChain, FAISS, OpenAI, Streamlit} \;\textbar\;
+     \faGithub\ \href{https://github.com/Shreeshail-sp/FinBot}{Repository}}{2024 -- 2025}
     \resumeItemListStart
       \resumeItem{Built an LLM-powered financial news research system implementing \textbf{retrieval-augmented generation} to surface accurate, source-backed answers for analysts.}
       \resumeItem{Developed ingestion pipelines with advanced text splitting and OpenAI embeddings; implemented \textbf{FAISS} vector index for sub-second semantic retrieval.}
+      \resumeItem{Designed a Streamlit interface that lets analysts paste news article URLs, ask natural-language questions, and view answers with citations to the source paragraphs.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%-------------------------------------------------------------------------------
-%   CO-CURRICULAR & LEADERSHIP
-%-------------------------------------------------------------------------------
+%---------- CO-CURRICULAR & LEADERSHIP ----------
 \section{Co-Curricular \& Leadership}
-\begin{itemize}[leftmargin=0.0in, label={}]\small{\item{
-    \textbf{Certifications:} Prompt Engineering, Columbia University, May 2025 \\ \vspace{2pt}
-    \textbf{Industrial Visits:} Attended \textbf{Bangalore Tech Summit 2024} to explore AI, Cloud, and Data Engineering industry trends. \\ \vspace{2pt}
-    \textbf{Extracurriculars:} Active \textbf{Cricket} and \textbf{Volleyball} player -- demonstrates teamwork, discipline, and leadership. \\ \vspace{2pt}
-    \textbf{NSS Volunteer:} Organized digital literacy drives and exam-awareness sessions; led coordination and communications with local stakeholders.
-}}\end{itemize}
+\small
+\textbf{Certifications:} Prompt Engineering, Columbia University, May 2025. \\[2pt]
+\textbf{Industrial Visit:} Attended \textbf{Bangalore Tech Summit 2024} to explore AI, Cloud, and Data Engineering industry trends. \\[2pt]
+\textbf{Extracurriculars:} Active \textbf{Cricket} and \textbf{Volleyball} player -- demonstrates teamwork, discipline, and leadership. \\[2pt]
+\textbf{NSS Volunteer:} Organized digital literacy drives and exam-awareness sessions; led coordination and communications with local stakeholders.
 
 %===============================================================================
 \end{document}
