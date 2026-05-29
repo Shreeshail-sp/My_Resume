@@ -1,0 +1,183 @@
+%-------------------------------------------------------------------------------
+%   SHREESHAIL SHIVPPA PADADALI -- RESUME
+%   Single-page A4, ATS-friendly LaTeX resume.
+%   Engine: pdfLaTeX. Compiles cleanly on Overleaf with no setup.
+%-------------------------------------------------------------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%-------------------------------------------------------------------------------
+%   GEOMETRY -- A4, single-page friendly margins
+%-------------------------------------------------------------------------------
+\pagestyle{fancy}
+\fancyhf{}\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.8in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% ATS-friendly machine-readable PDF
+\pdfgentounicode=1
+
+%-------------------------------------------------------------------------------
+%   CUSTOM COMMANDS
+%-------------------------------------------------------------------------------
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small#2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%===============================================================================
+\begin{document}
+%===============================================================================
+
+%---------- HEADER ----------
+\begin{center}
+    {\LARGE \scshape \textbf{Shreeshail Shivppa Padadali}} \\ \vspace{2pt}
+    \small Amaravati Gents PG, Brookfield, Bengaluru 560037 \\ \vspace{2pt}
+    \small
+    \faPhone\ +91-8277220852 \;\textbar\;
+    \faEnvelope\ \href{mailto:shreeshailx@gmail.com}{shreeshailx@gmail.com} \;\textbar\;
+    \faGlobe\ \href{https://shreeshail-sp.github.io/Portfolio/}{Portfolio} \;\textbar\;
+    \faLinkedin\ \href{https://www.linkedin.com/in/shreeshail-padadali/}{LinkedIn} \;\textbar\;
+    \faGithub\ \href{https://github.com/Shreeshail-sp}{GitHub} \;\textbar\;
+    \faTrophy\ \href{https://www.kaggle.com/}{Kaggle}
+\end{center}
+
+%---------- CAREER OBJECTIVE ----------
+\section{Career Objective}
+\small Motivated Computer Science undergraduate eager to take on real-world challenges and contribute to impactful projects. Quick learner with a strong interest in building practical solutions in team-driven environments. Seeking an internship opportunity to grow, take ownership, and deliver high-quality results.
+\vspace{-2pt}
+
+%---------- EDUCATION ----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {CMR Institute of Technology}{2022 -- 2026 \textit{(Expected)}}
+    {B.E. \textit{(Computer Science and Engineering)}}{Bengaluru, Karnataka}
+  \resumeSubheading
+    {Ambika PU College}{2020 -- 2022}
+    {Pre-University \textit{(Science)}}{Puttur, Karnataka}
+  \resumeSubheading
+    {Shri Sharada English Medium High School}{2019 -- 2020}
+    {SSLC}{Muddebihal, Karnataka}
+\resumeSubHeadingListEnd
+
+%---------- TECHNICAL SKILLS -- 2-column layout ----------
+\section{Technical Skills}
+\vspace{-2pt}
+\noindent\begin{minipage}[t]{0.48\textwidth}
+\small
+\textbf{Programming:} Python (NumPy, Pandas, OOP), C \\[2pt]
+\textbf{Data Science \& Analysis:} Data Cleaning, Visualization (Matplotlib, Seaborn), EDA \\[2pt]
+\textbf{Machine Learning:} Scikit-learn, Supervised \& Unsupervised, Model Evaluation \\[2pt]
+\textbf{NLP:} NLTK, Text Preprocessing, Tokenization, VADER \\[2pt]
+\textbf{AI \& GenAI:} LLMs, RAG Pipelines, OpenAI APIs, LangChain, FAISS
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\small
+\textbf{DevOps \& Cloud:} Docker, AWS ECS, Amazon ECR, IAM, CloudWatch \\[2pt]
+\textbf{CI/CD \& Tools:} Git, GitHub, GitHub Actions, Jenkins (Basic), Postman \\[2pt]
+\textbf{Databases:} MySQL, SQL (Joins, Queries, Data Retrieval) \\[2pt]
+\textbf{Soft Skills:} Communication, Client Interaction, Presentation, Teamwork, Leadership
+\end{minipage}
+\vspace{2pt}
+
+%---------- EXPERIENCE ----------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {DevOps Intern -- Avijo}{Apr 2026 -- Present}
+    {Internship}{Remote}
+    \resumeItemListStart
+      \resumeItem{Containerized backend applications using \textbf{Docker} and deployed services on \textbf{AWS ECS}.}
+      \resumeItem{Built automated \textbf{CI/CD pipelines} with GitHub Actions and integrated \textbf{Amazon ECR} for deployments.}
+      \resumeItem{Monitored deployments, tested APIs using Postman, and managed cloud services like \textbf{ECS, IAM, CloudWatch}.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%---------- PROJECTS (only two) ----------
+\section{Projects}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\textbf{Airbnb Sentiment Analysis} \emph{$|$ Python, NLTK (VADER), Pandas, Plotly, GitHub Pages} \;\textbar\;
+     \faGlobe\ \href{https://shreeshail-sp.github.io/Air_BNB_Sentiment-_Ananlysis/}{Live Demo} \;\textbar\;
+     \faGithub\ \href{https://github.com/Shreeshail-sp/Air_BNB_Sentiment-_Ananlysis}{Repository}}{2024}
+    \resumeItemListStart
+      \resumeItem{Implemented an end-to-end sentiment analysis pipeline that ranks \textbf{119 Airbnb listings} across \textbf{14{,}579 reviews} by review polarity (range $-1$ to $1$) using NLTK VADER and POS-tagged noun-phrase mining.}
+      \resumeItem{Applied review and phrase-level sentiment to surface the specific features guests praise or complain about, producing structured insights and summary metrics for stakeholders.}
+      \resumeItem{Shipped a public, fully static dashboard on \textbf{GitHub Pages} with sortable rankings, distribution charts, and four interactive Plotly reports -- requires no backend server.}
+    \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\textbf{FinBot: News Research Tool} \emph{$|$ Python, LangChain, FAISS, OpenAI, Streamlit} \;\textbar\;
+     \faGithub\ \href{https://github.com/Shreeshail-sp/FinBot}{Repository}}{2024 -- 2025}
+    \resumeItemListStart
+      \resumeItem{Built an LLM-powered financial news research system implementing \textbf{retrieval-augmented generation} to surface accurate, source-backed answers for analysts.}
+      \resumeItem{Developed ingestion pipelines with advanced text splitting and OpenAI embeddings; implemented \textbf{FAISS} vector index for sub-second semantic retrieval.}
+      \resumeItem{Designed a Streamlit interface that lets analysts paste news article URLs, ask natural-language questions, and view answers with citations to the source paragraphs.}
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%---------- CO-CURRICULAR & LEADERSHIP ----------
+\section{Co-Curricular \& Leadership}
+\small
+\textbf{Certifications:} Prompt Engineering, Columbia University, May 2025. \\[2pt]
+\textbf{Industrial Visit:} Attended \textbf{Bangalore Tech Summit 2024} to explore AI, Cloud, and Data Engineering industry trends. \\[2pt]
+\textbf{Extracurriculars:} Active \textbf{Cricket} and \textbf{Volleyball} player -- demonstrates teamwork, discipline, and leadership. \\[2pt]
+\textbf{NSS Volunteer:} Organized digital literacy drives and exam-awareness sessions; led coordination and communications with local stakeholders.
+
+%===============================================================================
+\end{document}
+%===============================================================================
