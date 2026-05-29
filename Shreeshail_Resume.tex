@@ -1,7 +1,10 @@
 %-------------------------------------------------------------------------------
-%   SHREESHAIL SHIVPPA PADADALI -- RESUME
-%   Single-page A4, ATS-friendly LaTeX resume.
-%   Engine: pdfLaTeX. Compiles cleanly on Overleaf with no setup.
+%  SHREESHAIL SHIVAPPA PADADALI -- RESUME
+%  Single-page A4, ATS-friendly LaTeX resume.
+%  Engine: pdfLaTeX. Compiles cleanly on Overleaf with no setup.
+%
+%  Based on Jake Gutierrez's open-source template (MIT) -- adapted with a
+%  blue accent palette and a 2-column technical-skills layout.
 %-------------------------------------------------------------------------------
 
 \documentclass[a4paper,11pt]{article}
@@ -19,22 +22,21 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
+\usepackage{xcolor}
 \input{glyphtounicode}
 
-%-------------------------------------------------------------------------------
-%   GEOMETRY -- A4, single-page friendly margins
-%-------------------------------------------------------------------------------
 \pagestyle{fancy}
 \fancyhf{}\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+%-------------------------------------------------------------------------------
+%  GEOMETRY -- A4 with reclaimed margins for single-page fit
+%-------------------------------------------------------------------------------
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.2in}
-\addtolength{\topmargin}{-.8in}
+\addtolength{\topmargin}{-0.7in}
 \addtolength{\textheight}{1.5in}
 
 \urlstyle{same}
@@ -42,141 +44,196 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-\titleformat{\section}{
-  \vspace{-5pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+% Accent colour used by section rules and section titles.
+\definecolor{accentblue}{RGB}{26, 82, 160}
 
-% ATS-friendly machine-readable PDF
+%-------------------------------------------------------------------------------
+%  SECTION FORMATTING (tighter vertical rhythm than the upstream template)
+%-------------------------------------------------------------------------------
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries\color{accentblue}
+}{}{0em}{}[\color{accentblue}\titlerule \vspace{-5pt}]
+
+% Make the PDF machine-readable for ATS systems.
 \pdfgentounicode=1
 
 %-------------------------------------------------------------------------------
-%   CUSTOM COMMANDS
+%  CUSTOM COMMANDS
 %-------------------------------------------------------------------------------
-\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
+\newcommand{\resumeItem}[1]{%
+  \item\fontsize{10pt}{12pt}\selectfont{#1 \vspace{-3pt}}%
+}
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[4]{%
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{\color{accentblue}\fontsize{10.5pt}{12.5pt}\selectfont #1} &
+      \textbf{\fontsize{10pt}{12pt}\selectfont #2} \\
+    \textit{\fontsize{10pt}{12pt}\selectfont #3} &
+      \textit{\fontsize{10pt}{12pt}\selectfont #4} \\
+  \end{tabular*}\vspace{-7pt}%
 }
 
-\newcommand{\resumeProjectHeading}[2]{
+% Project heading -- right column (date) bolded.
+\newcommand{\resumeProjectHeading}[2]{%
   \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \small#2 \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \fontsize{10pt}{12pt}\selectfont #1 &
+      \textbf{\fontsize{10pt}{12pt}\selectfont #2} \\
+  \end{tabular*}\vspace{-7pt}%
 }
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+% Sub-header without a right column -- used by Co-Curricular sub-categories.
+\newcommand{\resumeSubHeader}[1]{%
+  \item \fontsize{10pt}{12pt}\selectfont #1 \vspace{-7pt}%
+}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=0pt, topsep=2pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{%
+  \begin{itemize}[leftmargin=0.0in, label={}, itemsep=0pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-2pt}}
+
+\newcommand{\resumeItemListStart}{%
+  \begin{itemize}[leftmargin=0.15in, itemsep=0pt, parsep=0pt, topsep=0pt]
+}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-3pt}}
 
 %===============================================================================
 \begin{document}
 %===============================================================================
 
-%---------- HEADER ----------
+%---------- HEADING ----------
 \begin{center}
-    {\LARGE \scshape \textbf{Shreeshail Shivppa Padadali}} \\ \vspace{2pt}
-    \small Amaravati Gents PG, Brookfield, Bengaluru 560037 \\ \vspace{2pt}
-    \small
-    \faPhone\ +91-8277220852 \;\textbar\;
-    \faEnvelope\ \href{mailto:shreeshailx@gmail.com}{shreeshailx@gmail.com} \;\textbar\;
-    \faGlobe\ \href{https://shreeshail-sp.github.io/Portfolio/}{Portfolio} \;\textbar\;
-    \faLinkedin\ \href{https://www.linkedin.com/in/shreeshail-padadali/}{LinkedIn} \;\textbar\;
-    \faGithub\ \href{https://github.com/Shreeshail-sp}{GitHub} \;\textbar\;
-    \faTrophy\ \href{https://www.kaggle.com/}{Kaggle}
+    {\fontsize{20pt}{24pt}\selectfont\scshape\bfseries\color{accentblue}%
+      SHREESHAIL SHIVAPPA PADADALI} \\[3pt]
+    \fontsize{10pt}{12pt}\selectfont
+    \faPhone\ +91 8277220852 \,\textbar\,
+    \href{mailto:shreeshailx@gmail.com}{\faEnvelope\ \underline{Gmail}} \,\textbar\,
+    \href{https://shreeshail-sp.github.io/Portfolio/}{\faGlobe\ \underline{Portfolio}} \,\textbar\,
+    \href{https://www.linkedin.com/in/shreeshailsp/}{\faLinkedin\ \underline{LinkedIn}} \,\textbar\,
+    \href{https://github.com/Shreeshail-sp}{\faGithub\ \underline{GitHub}} \,\textbar\,
+    \href{https://www.kaggle.com/shreeshail2004}{\faGlobe\ \underline{Kaggle}}
 \end{center}
+\vspace{-6pt}
 
 %---------- CAREER OBJECTIVE ----------
 \section{Career Objective}
-\small Motivated Computer Science undergraduate eager to take on real-world challenges and contribute to impactful projects. Quick learner with a strong interest in building practical solutions in team-driven environments. Seeking an internship opportunity to grow, take ownership, and deliver high-quality results.
-\vspace{-2pt}
+{\fontsize{10pt}{12pt}\selectfont%
+Computer Science student passionate about Python, web development, and cloud technologies.
+Excited to build AI/ML applications, APIs, and scalable systems that solve real-world problems.
+Highly motivated learner, eager to contribute and grow across software, data, AI/ML, and DevOps roles.\par}
+\vspace{-3pt}
 
 %---------- EDUCATION ----------
 \section{Education}
 \resumeSubHeadingListStart
   \resumeSubheading
     {CMR Institute of Technology}{2022 -- 2026 \textit{(Expected)}}
-    {B.E. \textit{(Computer Science and Engineering)}}{Bengaluru, Karnataka}
+    {B.E. in Computer Science and Engineering}{Bengaluru, Karnataka}
   \resumeSubheading
     {Ambika PU College}{2020 -- 2022}
-    {Pre-University \textit{(Science)}}{Puttur, Karnataka}
-  \resumeSubheading
-    {Shri Sharada English Medium High School}{2019 -- 2020}
-    {SSLC}{Muddebihal, Karnataka}
+    {Pre-University (Science)}{Puttur, Karnataka}
 \resumeSubHeadingListEnd
 
-%---------- TECHNICAL SKILLS -- 2-column layout ----------
+%---------- TECHNICAL SKILLS (2-column tabularx) ----------
 \section{Technical Skills}
-\vspace{-2pt}
-\noindent\begin{minipage}[t]{0.48\textwidth}
-\small
-\textbf{Programming:} Python (NumPy, Pandas, OOP), C \\[2pt]
-\textbf{Data Science \& Analysis:} Data Cleaning, Visualization (Matplotlib, Seaborn), EDA \\[2pt]
-\textbf{Machine Learning:} Scikit-learn, Supervised \& Unsupervised, Model Evaluation \\[2pt]
-\textbf{NLP:} NLTK, Text Preprocessing, Tokenization, VADER \\[2pt]
-\textbf{AI \& GenAI:} LLMs, RAG Pipelines, OpenAI APIs, LangChain, FAISS
-\end{minipage}\hfill
-\begin{minipage}[t]{0.48\textwidth}
-\small
-\textbf{DevOps \& Cloud:} Docker, AWS ECS, Amazon ECR, IAM, CloudWatch \\[2pt]
-\textbf{CI/CD \& Tools:} Git, GitHub, GitHub Actions, Jenkins (Basic), Postman \\[2pt]
-\textbf{Databases:} MySQL, SQL (Joins, Queries, Data Retrieval) \\[2pt]
-\textbf{Soft Skills:} Communication, Client Interaction, Presentation, Teamwork, Leadership
-\end{minipage}
-\vspace{2pt}
+% Scope tabcolsep so the change doesn't leak into later tables.
+\begingroup
+\setlength{\tabcolsep}{4pt}
+\fontsize{10pt}{12pt}\selectfont
+\begin{tabularx}{\textwidth}{@{}X@{\hspace{8mm}}X@{}}
+
+  \textbf{Programming Languages:} Python, C, Bash, SQL &
+  \textbf{Web Technologies:} HTML, CSS \\[1pt]
+
+  \textbf{Frameworks \& Libraries:} Flask, Django, Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn &
+  \textbf{AI \& GenAI:} LLMs, RAG Pipelines, Transformers, Prompt Engineering \\[1pt]
+
+  \textbf{Databases:} MySQL, MongoDB &
+  \textbf{Cloud Platforms:} AWS, GCP \\[1pt]
+
+  \textbf{DevOps \& CI/CD:} GitHub Actions, Ansible, Jenkins &
+  \textbf{Version Control:} Git, GitHub, GitLab \\[1pt]
+
+  \textbf{Architecture \& APIs:} RESTful APIs, API Design &
+  \textbf{Data Handling:} Data Cleaning, EDA, Visualization, Preprocessing \\[1pt]
+
+  \textbf{Tools:} VS Code, Power BI, MS Office, Jupyter Notebook &
+  \textbf{Operating Systems:} Windows, Linux (Ubuntu) \\[1pt]
+
+  \textbf{Methodologies:} Agile, Scrum, OOP, Design Patterns &
+  \textbf{Soft Skills:} Problem-Solving, Teamwork, Communication, Leadership \\[1pt]
+
+  \textbf{Machine Learning:} Supervised \& Unsupervised Learning, Model Evaluation, Feature Engineering &
+  \textbf{Deep Learning:} Neural Networks, CNNs, RNNs, PyTorch, TensorFlow \\[1pt]
+
+  % Last row -- span both columns so the right side isn't visually empty.
+  \multicolumn{2}{@{}l@{}}{\textbf{Containerization:} Docker (Basics)} \\
+
+\end{tabularx}
+\endgroup
+\vspace{-3pt}
 
 %---------- EXPERIENCE ----------
 \section{Experience}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {DevOps Intern -- Avijo}{Apr 2026 -- Present}
-    {Internship}{Remote}
+    {Avijo}{Apr 2026 -- Present}
+    {DevOps Intern}{Remote}
     \resumeItemListStart
-      \resumeItem{Containerized backend applications using \textbf{Docker} and deployed services on \textbf{AWS ECS}.}
-      \resumeItem{Built automated \textbf{CI/CD pipelines} with GitHub Actions and integrated \textbf{Amazon ECR} for deployments.}
-      \resumeItem{Monitored deployments, tested APIs using Postman, and managed cloud services like \textbf{ECS, IAM, CloudWatch}.}
+      \resumeItem{Analyzed and planned the migration of containerized backend services from AWS App Runner to AWS ECS Express Mode, focusing on infrastructure optimization and cloud cost reduction.}
+      \resumeItem{Investigated and troubleshot CI/CD deployment issues across GitHub, Cloudflare Pages, and AWS services through deployment-flow analysis, configuration reviews, and root-cause identification.}
+      \resumeItem{Conducted cloud infrastructure audits involving AWS and GCP resources, including API key governance, access control reviews, and deployment architecture documentation.}
     \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%---------- PROJECTS (only two) ----------
+%---------- PROJECTS ----------
 \section{Projects}
 \resumeSubHeadingListStart
 
   \resumeProjectHeading
-    {\textbf{Airbnb Sentiment Analysis} \emph{$|$ Python, NLTK (VADER), Pandas, Plotly, GitHub Pages} \;\textbar\;
-     \faGlobe\ \href{https://shreeshail-sp.github.io/Air_BNB_Sentiment-_Ananlysis/}{Live Demo} \;\textbar\;
-     \faGithub\ \href{https://github.com/Shreeshail-sp/Air_BNB_Sentiment-_Ananlysis}{Repository}}{2024}
+    {\textbf{\color{accentblue}Airbnb Sentiment Analysis}
+      \emph{$|$ Python, NLTK (VADER)} \,\textbar\,
+      \faGlobe\ \href{https://shreeshail-sp.github.io/Air_BNB_Sentiment-_Ananlysis/}{\underline{Live Demo}} \,\textbar\,
+      \faGithub\ \href{https://github.com/Shreeshail-sp/Air_BNB_Sentiment-_Ananlysis}{\underline{Repository}}}{Dec 2025}
     \resumeItemListStart
       \resumeItem{Implemented an end-to-end sentiment analysis pipeline that ranks \textbf{119 Airbnb listings} across \textbf{14{,}579 reviews} by review polarity (range $-1$ to $1$) using NLTK VADER and POS-tagged noun-phrase mining.}
-      \resumeItem{Applied review and phrase-level sentiment to surface the specific features guests praise or complain about, producing structured insights and summary metrics for stakeholders.}
-      \resumeItem{Shipped a public, fully static dashboard on \textbf{GitHub Pages} with sortable rankings, distribution charts, and four interactive Plotly reports -- requires no backend server.}
+      \resumeItem{Applied review and phrase-level sentiment to surface specific features guests praise or complain about, producing structured insights and summary metrics for stakeholders.}
     \resumeItemListEnd
 
   \resumeProjectHeading
-    {\textbf{FinBot: News Research Tool} \emph{$|$ Python, LangChain, FAISS, OpenAI, Streamlit} \;\textbar\;
-     \faGithub\ \href{https://github.com/Shreeshail-sp/FinBot}{Repository}}{2024 -- 2025}
+    {\textbf{\color{accentblue}FinBot: News Research Tool}
+      \emph{$|$ Python, LangChain, FAISS} \,\textbar\,
+      \faGithub\ \href{https://github.com/Shreeshail-sp/FinBot}{\underline{Repository}}}{Jun 2025}
     \resumeItemListStart
-      \resumeItem{Built an LLM-powered financial news research system implementing \textbf{retrieval-augmented generation} to surface accurate, source-backed answers for analysts.}
-      \resumeItem{Developed ingestion pipelines with advanced text splitting and OpenAI embeddings; implemented \textbf{FAISS} vector index for sub-second semantic retrieval.}
-      \resumeItem{Designed a Streamlit interface that lets analysts paste news article URLs, ask natural-language questions, and view answers with citations to the source paragraphs.}
+      \resumeItem{Built an LLM-powered financial news research system implementing \textbf{retrieval-augmented generation (RAG)} to surface accurate, source-backed answers for financial analysts.}
+      \resumeItem{Developed ingestion pipelines with advanced text splitting and OpenAI embeddings; implemented \textbf{FAISS} vector index for sub-second semantic retrieval over large document sets.}
     \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 
-%---------- CO-CURRICULAR & LEADERSHIP ----------
-\section{Co-Curricular \& Leadership}
-\small
-\textbf{Certifications:} Prompt Engineering, Columbia University, May 2025. \\[2pt]
-\textbf{Industrial Visit:} Attended \textbf{Bangalore Tech Summit 2024} to explore AI, Cloud, and Data Engineering industry trends. \\[2pt]
-\textbf{Extracurriculars:} Active \textbf{Cricket} and \textbf{Volleyball} player -- demonstrates teamwork, discipline, and leadership. \\[2pt]
-\textbf{NSS Volunteer:} Organized digital literacy drives and exam-awareness sessions; led coordination and communications with local stakeholders.
+%---------- CO-CURRICULAR & EXTRA-CURRICULAR ----------
+\section{Co-Curricular \& Extra-Curricular Activities}
+\resumeSubHeadingListStart
+
+  \resumeSubHeader{\textbf{\color{accentblue}Certifications}}
+  \resumeItemListStart
+    \resumeItem{\textbf{AWS Educate: Introduction to Generative AI} -- Amazon Web Services, Jul 2025}
+    \resumeItem{\textbf{Introduction to Data Science} -- Springboard, Sep 2024}
+    \resumeItem{\textbf{Database and SQL Fundamentals} -- Infosys Springboard, May 2023}
+  \resumeItemListEnd
+
+  \resumeSubHeader{\textbf{\color{accentblue}Industrial Visits}}
+  \resumeItemListStart
+    \resumeItem{Visited \textbf{Bangalore Tech Summit 2024} to explore advancements in AI, Cloud Computing, and Data Engineering.}
+  \resumeItemListEnd
+
+  \resumeSubHeader{\textbf{\color{accentblue}Sports}}
+  \resumeItemListStart
+    \resumeItem{Active \textbf{Cricket} and \textbf{Volleyball} player demonstrating strong teamwork and leadership skills.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
 
 %===============================================================================
 \end{document}
